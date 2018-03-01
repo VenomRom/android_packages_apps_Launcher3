@@ -42,6 +42,7 @@ import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.View;
@@ -196,7 +197,10 @@ public class SettingsActivity extends Activity {
                     return true;
                 }
             });
-        }
+
+            SwitchPreference desktopShowLabel = (SwitchPreference) findPreference(Utilities.DESKTOP_SHOW_LABEL);
+            SwitchPreference allAppsShowLabel = (SwitchPreference) findPreference(Utilities.ALLAPPS_SHOW_LABEL);
+	}
 
         @Override
         public void onSaveInstanceState(Bundle outState) {
